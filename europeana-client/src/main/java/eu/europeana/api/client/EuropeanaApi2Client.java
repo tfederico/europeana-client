@@ -73,8 +73,7 @@ public class EuropeanaApi2Client extends EuropeanaConnection {
 	 * API by calling the {@link #getSearchResults(String)} method.
 	 * 
 	 * @param query
-	 * 			@see Api2Query: a query object representing the expected
-	 *            results.
+	 *
 	 * @param limit:
 	 *            the limit for the amount of results retrieved.
 	 * @param start:
@@ -96,7 +95,7 @@ public class EuropeanaApi2Client extends EuropeanaConnection {
 	 * Uses cursor pagination
 	 * @param query
 	 * @param cursor
-	 * @param start
+	 * @param
 	 * @return
 	 * @throws IOException
 	 * @throws EuropeanaApiProblem

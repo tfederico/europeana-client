@@ -7,6 +7,7 @@ import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.LineIterator;
+import org.apache.log4j.Category;
 import org.junit.Test;
 import org.junit.runner.JUnitCore;
 
@@ -70,7 +71,7 @@ public class DownloadFullObjectsTest extends
 					cnt++;
 					
 					if(cnt%100==0)
-						log.debug("Downloaded metadata files: " + cnt);					
+						log.debug("Downloaded metadata files: " + cnt);
 				}else{
 					skipCounter++;
 				}

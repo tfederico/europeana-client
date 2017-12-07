@@ -25,7 +25,7 @@ import eu.europeana.api.client.search.query.Api2QueryInterface;
 //@Ignore
 public class ContentAccessorTest extends EuClientDatasetUtil {
 
-	//@Test
+	@Test
 	public void saveSoundContentMap() throws IOException, EuropeanaApiProblem {
 		Api2QueryBuilder queryBuilder = new Api2QueryBuilder();
 		String portalUrl = "http://www.europeana.eu/portal/search.html?query=provider_aggregation_edm_isShownBy%3Ahttp*&rows=24&qf=TYPE%3ASOUND&qt=false";
