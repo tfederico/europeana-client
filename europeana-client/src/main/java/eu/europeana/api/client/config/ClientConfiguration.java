@@ -9,7 +9,7 @@ import eu.europeana.api.client.exception.TechnicalRuntimeException;
 public class ClientConfiguration implements EuropeanaApiConfiguration,
 		ThumbnailAccessConfiguration {
 
-	protected static final String EUROPEANA_CLIENT_PROPERTIES_FILE = "./europeana-client.properties";
+	protected static final String EUROPEANA_CLIENT_PROPERTIES_FILE = "/europeana-client.properties";
 	// API CONFIG KEYS
 	public static final String PROP_EUROPEANA_API_KEY = "europeana.api.key";
 	public static final String PROP_EUROPEANA_API_URI = "europeana.api.uri";
