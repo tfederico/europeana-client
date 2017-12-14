@@ -15,7 +15,7 @@ import eu.europeana.api.client.search.query.Api2Query;
 
 public class ObjectRetrievalTest {
 
-	@Test
+	/*@Test
 	public void test() throws IOException, EuropeanaApiProblem {
 		EuropeanaApi2Client ec = new EuropeanaApi2Client();
 		Api2Query query = new Api2Query();
@@ -43,5 +43,5 @@ public class ObjectRetrievalTest {
         	EuropeanaObject eo = ec.getObject(result.getId());
         	System.out.println(eo.toString());
         }
-	}	
+	}*/
 }

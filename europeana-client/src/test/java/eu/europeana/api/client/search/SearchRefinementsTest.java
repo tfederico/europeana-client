@@ -14,7 +14,7 @@ import eu.europeana.api.client.search.query.Api2Query;
 
 public class SearchRefinementsTest {
 
-	@Test
+	/*@Test
 	public void testQueryRefinements() throws IOException, EuropeanaApiProblem {
 
 		long ms0 = System.currentTimeMillis();
@@ -62,5 +62,5 @@ public class SearchRefinementsTest {
 			System.out.println("Thumbnail(s): " + item.getEdmPreview());
 			System.out.println("Data provider: " + item.getDataProvider());
 		}
-	}
+	}*/
 }

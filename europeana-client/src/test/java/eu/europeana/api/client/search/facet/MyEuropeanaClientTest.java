@@ -16,7 +16,7 @@ import eu.europeana.api.client.myeuropeana.response.TagsApiResponse;
 
 public class MyEuropeanaClientTest {
 
-	@Test
+	/*@Test
 	public void testParseApiResponse() throws MyEuropeanaApiException, IOException{
 		MyEuropeanaClient client = new MyEuropeanaClientImpl();
 		String jsonFile = "/myeuropeana/mydata_tag.json";
@@ -45,5 +45,5 @@ public class MyEuropeanaClientTest {
 		}
 		return out.toString();
 
-	}
+	}*/
 }

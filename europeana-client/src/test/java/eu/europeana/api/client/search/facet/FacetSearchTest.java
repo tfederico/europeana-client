@@ -18,7 +18,7 @@ import eu.europeana.api.client.search.query.Api2Query;
 public class FacetSearchTest {
 	
 
-	@Test
+	/*@Test
 	public void testParseApiResponse() throws IOException, EuropeanaApiProblem{
 		EuropeanaApi2Client client = new EuropeanaApi2Client();
 		String jsonFile = "/europeanaclient/facets/pd_collections_facets.json";
@@ -88,5 +88,5 @@ public class FacetSearchTest {
 		}
 		return out.toString();
 
-	}
+	}*/
 }

@@ -26,7 +26,8 @@ public class ThumbnailsForCollectionAccessorTest extends ThumbnailAccessorUtils{
 		// assert all image urls are correct
 		assertTrue(thumbnails.size() == resultsSize);
 		
-		// check if the contnt of the collection was changed 
+		// check if the contnt of the collection was changed
+		System.out.println(tca.getTotalResults());
 		assertTrue(TEST_COLLECTION_SIZE == tca.getTotalResults());
 				
 		

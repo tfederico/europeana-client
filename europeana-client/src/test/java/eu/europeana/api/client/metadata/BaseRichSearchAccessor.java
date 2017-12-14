@@ -35,7 +35,7 @@ public class BaseRichSearchAccessor extends EuClientDatasetUtil {
 	/**
 	 * This method uploads collection metadata, stores them in JSON files in the folder defined in 
 	 * configuration file and creates overview file in CSV format. 
-	 * @param collectionName
+	 * @param
 	 * @param maxSize
 	 * @throws Throwable
 	 */

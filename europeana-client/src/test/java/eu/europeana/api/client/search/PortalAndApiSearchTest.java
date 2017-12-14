@@ -12,7 +12,7 @@ import eu.europeana.api.client.model.EuropeanaApi2Results;
 
 public class PortalAndApiSearchTest extends BaseSearchUtils{
 
-	@Test
+	/*@Test
 	public void testSearchByPortalUrl() throws IOException, EuropeanaApiProblem{
 		
 		EuropeanaApi2Client client = new EuropeanaApi2Client();
@@ -23,6 +23,6 @@ public class PortalAndApiSearchTest extends BaseSearchUtils{
 		assertEquals(5, results.getItemsCount());
 		
 		printSearchResults(results);
-	}
+	}*/
 	
 }

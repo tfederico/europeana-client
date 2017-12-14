@@ -22,7 +22,7 @@ import eu.europeana.api.client.search.query.Api2QueryInterface;
  * @author Sergiu Gordea 
  *
  */
-//@Ignore
+@Ignore
 public class ContentAccessorTest extends EuClientDatasetUtil {
 
 	@Test
