@@ -51,7 +51,7 @@ public class ClientConfiguration implements EuropeanaApiConfiguration,
 	public synchronized void loadProperties() {
 		try {
 			properties = new Properties();
-			IgnputStream resourceAsStream = getClass().getResourceAsStream(
+			InputStream resourceAsStream = getClass().getResourceAsStream(
 					EUROPEANA_CLIENT_PROPERTIES_FILE);
 			if (resourceAsStream != null)
 				getProperties().load(resourceAsStream);
