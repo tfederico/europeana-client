@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Map;
 
+import eu.europeana.api.client.metadata.MetadataAccessor;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -36,8 +37,8 @@ public class ContentAccessorTest extends EuClientDatasetUtil {
 		if(!toFile.exists()){
 			//File toFile = new File("/tmp/eusounds", "europeana_allsound_test.csv");
 			
-			ContentAccessor ca = new ContentAccessor(apiQuery, null);
-			Map<String, String> contentMap = ca.getContentMap(CommonMetadata.EDM_FIELD_IS_SHOWN_BY, -1, -1, ContentAccessor.ERROR_POLICY_CONTINUE);
+			MetadataAccessor ca = new MetadataAccessor(apiQuery, null);
+			Map<String, String> contentMap = ca.getContentMap(CommonMetadata.EDM_FIELD_IS_SHOWN_BY, -1, -1, MetadataAccessor.ERROR_POLICY_CONTINUE);
 			//Map<String, String> contentMap = ca.getContentMap(CommonMetadata.EDM_FIELD_IS_SHOWN_BY, -1, 5, ContentAccessor.ERROR_POLICY_CONTINUE);
 			//writeContentMapToFile(, contentMap, toFile);
 			DatasetDescriptor descriptor = new DatasetDescriptor("allsound", "europeana");
@@ -64,9 +65,9 @@ public class ContentAccessorTest extends EuClientDatasetUtil {
 		
 		File toFile = new File("/tmp/eusounds", "europeana_safari_music.csv");
 		if(!toFile.exists()){		
-			ContentAccessor ca = new ContentAccessor(apiQuery, null);
+			MetadataAccessor ca = new MetadataAccessor(apiQuery, null);
 			Map<String, String> contentMap = ca.getContentMap(
-					CommonMetadata.EDM_FIELD_IS_SHOWN_BY, 0, -1, ContentAccessor.ERROR_POLICY_CONTINUE);
+					CommonMetadata.EDM_FIELD_IS_SHOWN_BY, 0, -1, MetadataAccessor.ERROR_POLICY_CONTINUE);
 			DatasetDescriptor descriptor = new DatasetDescriptor("allsound", "europeana");
 			writeMapToCsvFile(descriptor, contentMap, toFile, POLICY_OVERWRITE_FILE);
 		}else{

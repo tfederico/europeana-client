@@ -29,7 +29,7 @@ import eu.europeana.api.client.util.BlockIterator.BlockLoader;
  * @author Andres Viedma Pelaez
  * @author Sergiu Gordea
  */
-public class EuropeanaConnection {
+ class EuropeanaConnection {
 
 	private static final Log log = LogFactory.getLog(EuropeanaConnection.class);
 	
@@ -130,8 +130,9 @@ public class EuropeanaConnection {
      * @throws IOException
      */
     public String searchJsonPage(EuropeanaQueryInterface search, long limit, long offset) throws IOException {
-        String url = search.getQueryUrl(this, limit, offset);
-        return this.getJSONResult(url);
+        /*String url = search.getQueryUrl(this, limit, offset);
+        return this.getJSONResult(url);*/
+        return null;
     }
 
     /**
@@ -139,8 +140,6 @@ public class EuropeanaConnection {
      * There's no limit in the size of the Iterator, so it can be potentially
      * very large and need a big number of requests to the API, so this method
      * should be used carefully.
-     * 
-     * @throws TechnicalRuntimeException in case of an error in a call to Europeana
      */
     public Iterator<EuropeanaApi2Item> iterateResults (EuropeanaQueryInterface searchQuery, long offset) throws IOException {
 

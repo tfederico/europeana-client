@@ -15,9 +15,9 @@ import java.util.Map;
 
 
 import eu.europeana.api.client.EuropeanaApi2Client;
-import eu.europeana.api.client.content.ContentAccessor;
 import eu.europeana.api.client.exception.EuropeanaApiProblem;
 import eu.europeana.api.client.exception.EuropeanaClientException;
+import eu.europeana.api.client.metadata.MetadataAccessor;
 import eu.europeana.api.client.model.EuropeanaApi2Results;
 import eu.europeana.api.client.model.search.EuropeanaApi2Item;
 import eu.europeana.api.client.model.search.EuropeanaObject;
@@ -33,7 +33,7 @@ import eu.europeana.api.client.search.query.EuropeanaQueryInterface;
  *          The class provides functionality to copy thumbnails and write a
  *          thumbnail to a folder.
  */
-public class ThumbnailsAccessor extends ContentAccessor{
+public class ThumbnailsAccessor extends MetadataAccessor{
 	boolean filterThumbnails = false;
 	final int PLACEHOLDER_SIZE = 3583;
 	final int LOW_QUALITY_SIZE = 1000;
@@ -48,7 +48,7 @@ public class ThumbnailsAccessor extends ContentAccessor{
 	/**
 	 * Constructor with predefined europeana client.
 	 * 
-	 * @param europeanaClient
+	 * @param apiClient
 	 *            : EuropeanaApi2Client object defining the used europeana
 	 *            client.
 	 */

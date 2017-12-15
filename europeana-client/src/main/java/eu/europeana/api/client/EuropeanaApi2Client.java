@@ -7,7 +7,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import eu.europeana.api.client.config.ClientConfiguration;
-import eu.europeana.api.client.connection.EuropeanaConnection;
+import eu.europeana.api.client.connection.BaseApiConnection;
 import eu.europeana.api.client.exception.EuropeanaApiProblem;
 import eu.europeana.api.client.model.EuropeanaApi2Results;
 import eu.europeana.api.client.model.EuropeanaObjectResponse;
@@ -27,7 +27,7 @@ import eu.europeana.api.client.search.query.EuropeanaQueryInterface;
  *          Furthermore, it sends search requests, retrieves results and gets
  *          objects from the search service.
  */
-public class EuropeanaApi2Client extends EuropeanaConnection {
+public class EuropeanaApi2Client extends BaseApiConnection {
 	private String jsonResult = "";
 	private EuropeanaObjectResponse objects;
 	private Api2QueryBuilder queryBuilder;

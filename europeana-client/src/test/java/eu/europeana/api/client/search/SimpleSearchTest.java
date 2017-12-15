@@ -131,6 +131,8 @@ public class SimpleSearchTest extends BaseSearchUtils{
             System.out.println(noRes);
 
         System.out.println(noResults.size());
+
+        System.out.println(System.getProperty("user.dir"));
     }
 
 	/*@Test

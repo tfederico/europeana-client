@@ -9,7 +9,7 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
-import eu.europeana.api.client.connection.EuropeanaConnection;
+import eu.europeana.api.client.connection.BaseApiConnection;
 import eu.europeana.api.client.exception.TechnicalRuntimeException;
 import eu.europeana.api.client.search.common.EuropeanaOperators;
 
@@ -218,7 +218,7 @@ public class EuropeanaQuery implements EuropeanaQueryInterface, EuropeanaOperato
         return buf.toString();
     }
 
-	protected void buildSearchQueryString(StringBuffer buf) {
+    protected void buildSearchQueryString(StringBuffer buf) {
 		
 		if (this.wholeSubQuery != null && this.wholeSubQuery.trim().length() > 0) {
             buf.append(this.wholeSubQuery);
@@ -272,22 +272,22 @@ public class EuropeanaQuery implements EuropeanaQueryInterface, EuropeanaOperato
         	this.addSearchField(buf, "what", this.whatTerms, false, false, true);
 	}
 
-    public String getQueryUrl(EuropeanaConnection connection) throws UnsupportedEncodingException {
+    public String getQueryUrl(BaseApiConnection connection) throws UnsupportedEncodingException {
         return getQueryUrl(connection, EuropeanaComplexQuery.DEFAULT_OFFSET);
     }
 
-    public String getQueryUrl(EuropeanaConnection connection, long offset) throws UnsupportedEncodingException {
+    public String getQueryUrl(BaseApiConnection connection, long offset) throws UnsupportedEncodingException {
         return getQueryUrl(connection, 12, offset);
     }
     
     
-    public String getQueryUrl(EuropeanaConnection connection, String cursor, int rows) throws UnsupportedEncodingException {
+    public String getQueryUrl(BaseApiConnection connection, String cursor, int rows) throws UnsupportedEncodingException {
 	   throw new RuntimeException("Operation not supported");
 	}
 
     
-    public String getQueryUrl(EuropeanaConnection connection, long limit, long offset) throws UnsupportedEncodingException {
-        connection.setEuropeanaUri("http://api.europeana.eu/api/opensearch.json");
+    public String getQueryUrl(BaseApiConnection connection, long limit, long offset) throws UnsupportedEncodingException {
+        connection.setServiceUri("http://api.europeana.eu/api/opensearch.json");
         StringBuilder url = new StringBuilder();
         url.append(connection).append("?searchTerms=");
         String searchTerms = getSearchTerms();
